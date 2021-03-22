@@ -56,22 +56,23 @@
 				<div class="container">
 					<header class="major">
 						<h2>Getting Started</h2>
-						<p>Thank You for a patron of Datalogics<br />
-							Our AMI is designed to help companies accelerate their workflow</p>
+						<p>Thank You for being a patron of Datalogics<br />
+							Our AMI is designed to help companies accelerate their workflow.</p>
 					</header>
-					<p>Faucibus sed lobortis aliquam lorem blandit. Lorem eu nunc metus col. Commodo id in arcu ante
-						lorem ipsum sed accumsan erat praesent faucibus commodo ac mi lacus. Adipiscing mi ac commodo.
-						Vis aliquet tortor ultricies non ante erat nunc integer eu ante ornare amet commetus vestibulum
-						blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum.</p>
+
 					<ol>
 						<li>Launch the product via 1-click.</li>
-						<li>The Username for the instance is 'centos'</li>
-						<li>Access the application via terminal at 'ssh -i centos@publicdnsnamehere'</li>
-						<li>Login using the username admin and the EC2 instance ID as the password.</li>
-						<li>Our application is located in '/opt/datalogize/Zapier-Integration'. </li>
-						<li>Navigate to this directory</li>
-						<li>Modify 'configureurlhere.js'. </li>
-						<li>Replace 'YourDSNAddressHere' with DNS address provided by AMI.</li>
+						<li>The Username for the instance is 'centos'; you can access it via terminal 'ssh -i
+							<i>yourpemfile.pem</i> <i>centos@publicdnsnamehere'</i> </li>
+						<ul>
+							<li>The pem file is acquired when you create the AMI.</li>
+							<li>The publicdns is the publicdns of your instance assigned by AWS</li>
+						</ul>
+						<li>Our application is located in '/opt/datalogics/Zapier-integration'. </li>
+						<li>Modify 'server.js'. </li>
+						<ul>
+							<li>replace https://datalogics.ngrok.io/resource/ in server.js with your own url.</li>
+						</ul>
 					</ol>
 
 					<h2>Accessing Your Instance on Amazon Web Services (ec2)</h2>
@@ -82,6 +83,22 @@
 					</ol>
 
 
+					<h2>Nginx/PM2</h2>
+					<ol>
+						<li>Steps To Ensure API is Running</li>
+						<li>Once Logged into server</li>
+
+						<li>Steps to start PM2 Server</li>
+						<ol>
+							<li>pm2 status</li>
+						</ol>
+						<li>Steps to View status of Nginx</li>
+						<ol>
+							<li>service nginx status</li>
+							<li></li>
+						</ol>
+
+					</ol>
 				</div>
 			</section>
 
@@ -94,19 +111,23 @@
 						<li class="icon solid fa-code">/bmp - Convert PDF to BMP</li>
 						<li class="icon solid fa-cubes">/jpg - Convert PDF to JPG</li>
 						<li class="icon solid fa-code">/tif - Convert PDF to TIF</li>
-						<li class="icon solid fa-cubes">/png - Convert PDF to PNG</li>
 
-						<li class="icon solid fa-cubes">/pdf - Convert PDF to PDF</li>
-						<li class="icon solid fa-code">/bmp - Convert to BMP</li>
-						<li class="icon solid fa-cubes">/jpg - Convert to JPG</li>
+						<li class="icon solid fa-cubes">/png - Convert PDF to PNG</li>
+						<li class="icon solid fa-cubes">/gif - Convert PDF to GIF</li>
+						<li class="icon solid fa-cubes">/pdf - Convert IMG to PDF</li>
+
 					</ul>
 				</div>
+
+
 			</section>
 
 			<!-- Three -->
 			<section id="three">
 				<div class="container">
 					<h3>Example Commands</h3>
+
+
 					<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non.
 						Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
 					<div class="features">
